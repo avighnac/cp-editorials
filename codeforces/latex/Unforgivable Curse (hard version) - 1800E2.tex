@@ -37,7 +37,7 @@ which is really the same thing as swap sequence 1, but mirrored.
 
 Thus, in $s$, using swap sequence $1$, we can swap $s_{k+1}$ with $s_{k+2}$ by considering \texttt{x = s.substr(0, k + 2)}. Similarly, we can swap $s_{k+2}$ with $s_{k+3}$ by considering \texttt{x = s.substr(1, k + 2)}. If we keep doing this, we arrive at the conclusion that we can swap $s_i$ with $s_{i+1}$ $\forall i \in [k+1, n-1]$. Since we can swap all adjacent characters ahead of $s_i$, we can shuffle these characters however we want.
 
-By considering substrings of length $k+2$ starting from the back (that is, $s.\text{substr}(n-k-2, n-1)$, etc.), we'll be able to swap $s_i$ with $s_{i+1}$ $\forall i \in [1, n-k-1]$
+By considering substrings of length $k+2$ starting from the back (that is, \texttt{s.substr(n-k-2, n-1)}, etc.), we'll be able to swap $s_i$ with $s_{i+1}$ $\forall i \in [1, n-k-1]$
 
 If these two intersect, that is, if $s_{i+1}$ for $i=n-k-1$ overlaps with $s_i$ for $i = k+1$, then we'll be able to swap any two characters of the entire string. Let's calculate when this happens:
 
@@ -67,7 +67,7 @@ $\rightarrow\text{abd cef}$\\
 
 For $n<2k$, any character $s_i$ $\forall i \in [n-k+1, k]$ cannot be swapped with any other character since they're at a distance of less than $k$ from every other character (it is sufficient to check the first and last characters to prove this. Go ahead and try, you'll end up getting four inequalities). So \texttt{s.substr(n - k, 2k - n)} must equal \texttt{t.substr(n - k, 2k - n)}.
 
-This solution has a time complexity of $\mathcal{O}(n \log n)$.
+This solution has a time complexity of $\mathcal{O}(n)$.
 \section{Code}
 \begin{verbatim}
 std::string get(bool b) {
