@@ -67,7 +67,7 @@ $\rightarrow\text{abd cef}$\\
 
 For $n<2k$, any character $s_i$ $\forall i \in [n-k+1, k]$ cannot be swapped with any other character since they're at a distance of less than $k$ from every other character (it is sufficient to check the first and last characters to prove this. Go ahead and try, you'll end up getting four inequalities). So \texttt{s.substr(n - k, 2k - n)} must equal \texttt{t.substr(n - k, 2k - n)}.
 
-This solution has a time complexity of $\mathcal{O}(n)$.
+This solution has a time complexity of $\mathcal{O}(n \log n)$.
 \section{Code}
 \begin{verbatim}
 std::string get(bool b) {
