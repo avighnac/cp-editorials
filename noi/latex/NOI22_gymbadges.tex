@@ -15,7 +15,7 @@
   \large{June 2024}
 \end{center}
 
-This problem uses a technique known as an 'exchange argument'. This technique involves analyzing two cases of what happens when we challenge two gyms $i$ and $j$: the first one being us challenging gym $i$ first and the second being us challenging gym $j$ first.
+This problem uses a technique known as an 'exchange argument'. This technique involves analyzing two cases of what happens when we challenge two gyms $i$ and $j$: the first one being us challenging gym $i$ first and the second being us challenging gym $j$ first. We then use this to sort the gyms in such a way that for any two gyms $i$ and $j$, if it is more optimal to challenge gym $i$ before gym $j$, then gym $i$ comes before gym $j$.
 
 \section*{If we challenge gym $i$ before gym $j$}
 Let our level before challenging either one of the gyms be $L$. To fight gym $i$, $L \le i_L$ must be true (that is, our level must be less than the gym's level cap). Challenging this gym would gain us $i_X$ levels, making our new level $L+i_X$. Next, we challenge gym $j$, necessitating $L + i_X \le j_L$. Our level after this becomes $L+i_X+j_X$.
