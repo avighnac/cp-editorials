@@ -49,7 +49,7 @@ int main() {
  
 Note that this does not mean that we will necessarily challenge only a prefix of these gyms (it could very well be possible that our optimal solution excludes challenging some gym from the middle). Rather, our optimal solution will be a subsequence of $a$, and we will challenge them in order from left to right.
 
-The solution now is to greedily pick gyms. Let us maintain our current level ($L$) along with all gyms we have picked so far (initially empty). If $L\le L_i$, then we can challenge the $i^{th}$ gym. Otherwise, keeping in mind that each gym gives us exactly $1$ gym batch, it would perhaps be worth it to remove no more than $1$ gym from our list of challenged gyms if the gym we're looking at increases our levels by less than the gym we're removing.
+The solution now is to greedily pick gyms. Let us maintain our current level ($L$) along with all gyms we have picked so far (initially empty). If $L\le L_i$, then we can challenge the $i^{th}$ gym. Otherwise, keeping in mind that each gym gives us exactly $1$ gym badge, it would perhaps be worth it to remove no more than $1$ gym from our list of challenged gyms if the gym we're looking at increases our levels by less than the gym we're removing.
 
 Which gym would we remove? If $L>L_i$, then removing the gym with the largest $i_X$ value would give us the highest chance of satisfying $L\le L_i$ after the removal. Notice that this also gives us the highest chance of the gym we're potentially adding increasing our levels less than the gym that we're removing. So we do exactly that.
 
